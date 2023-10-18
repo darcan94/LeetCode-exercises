@@ -9,6 +9,11 @@ public class App {
         int target = 6;
         int[] result = TwoSum.twoSum(nums, target);
         System.out.println(Arrays.toString(result));
+        
+        /**
+         * 002-palindrome-number
+         */
+        PalindromeNumber.isPalindrome(1234);
     }
 
 }
