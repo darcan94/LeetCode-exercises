@@ -13,6 +13,11 @@
         Explanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.
  */
 public class PalindromeNumber {
+    public static void main(String[] args) {
+        boolean isPalindrome = PalindromeNumber.isPalindrome(12321);
+        System.out.println(isPalindrome);    
+    }
+
     public static boolean isPalindrome(int x){
         if(x < 0 || (x != 0 && x % 10 == 0)) return false;
         int rev = 0;

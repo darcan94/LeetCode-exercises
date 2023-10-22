@@ -30,7 +30,13 @@
  */
 import java.util.HashMap;
 
-public class RomanToInt {       
+public class RomanToInt {  
+    
+    public static void main(String[] args) {
+        int number = romanToInt("MCMXCIV");
+        System.out.println(number);
+    }
+
     public static int romanToInt(String s) {
         HashMap<Character, Integer> roman = new HashMap<>();
         roman.put('I', 1);
@@ -43,7 +49,7 @@ public class RomanToInt {
 
         int num = 0;
         int n = s.length() - 1;
-        for(int i = 0 ; i < n ; n++){
+        for(int i = 0 ; i < n ; i++){
             int current = roman.get(s.charAt(i));
             int next = roman.get(s.charAt(i + 1));
             if(current < next){
@@ -52,7 +58,6 @@ public class RomanToInt {
                 num += current;
             }
         }
-        num += roman.get(s.charAt(n));
-        return num;
+        return num + roman.get(s.charAt(n));
     }
 }

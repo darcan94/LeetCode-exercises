@@ -19,9 +19,17 @@
         Input: nums = [3,3], target = 6
         Output: [0,1]
  */
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class TwoSum{
+    public static void main(String[] args) {
+        int[] nums = {3,2,4};
+        int target = 6;
+        int[] result = TwoSum.twoSum(nums, target);
+        System.out.println(Arrays.toString(result));    
+    }
+
     public static int[] twoSum(int[] nums, int target){
         HashMap<Integer, Integer> hash = new HashMap<>();
         int n = nums.length;
