@@ -18,7 +18,7 @@
  */
 public class LongerCommonPrefix {
     public static void main(String[] args) {
-        String[] strings = {"cir","car"};
+        String[] strings = {"flower","flow","flight"};
         String common = longestCommonPrefix(strings);
         System.out.println(common);
     }
@@ -28,20 +28,10 @@ public class LongerCommonPrefix {
         if(n == 0 || strs == null) return "";
         String commonPrefix = strs[0];
         for(int i = 1; i < n; i++){
-            String aux = commonPrefix;
-            commonPrefix = "";            
-            int strlen = aux.length() < strs[i].length() ? aux.length(): strs[i].length();
-            if(strlen == 0) return "";
-            String str = aux;
-            String str2 = strs[i];
-            for(int x = 0; x < strlen; x++){
-                if(str.charAt(x) == str2.charAt(x)){
-                    commonPrefix += str.charAt(x);
-                }else{
-                    break;
-                }
-            }
-            
+            while(strs[i].indexOf(commonPrefix) != 0){
+                commonPrefix = commonPrefix.substring(0, commonPrefix.length() - 1);
+                if(commonPrefix.isEmpty()) return "";
+            }            
         }
         return commonPrefix;
     }

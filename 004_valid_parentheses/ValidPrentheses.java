@@ -21,5 +21,11 @@
         Output: false
  */
 public class ValidPrentheses {
-    
+    public static void main(String[] args) {
+        
+    }
+
+    public static boolean validPrentheses(String str){
+        return false;
+    }
 }
